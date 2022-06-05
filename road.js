@@ -18,6 +18,14 @@ class Road{
     ctx.lineWidth = 5;
     ctx.strokeStyle = "white";
 
+    for(let i = 0; i <= this.laneCount; i++){
+      const x = lerp(
+        this.left,
+        this.right,
+        i/this.laneCount
+      );
+    }
+
     // drwa line to the left side of the road
     ctx.beginPath();
     ctx.moveTo(this.left, this.top);
@@ -30,4 +38,10 @@ class Road{
     ctx.lineTo(this.right, this.bottom);
     ctx.stroke();
   }
+}
+
+// linear interpolation
+// t is a percentage
+function lerp(A,B,t) {
+  return A+(B-A)*t;
 }
