@@ -38,6 +38,14 @@ class Car{
       this.speed += this.friction;
     }
 
+    if(this.controls.left){
+      this.x -= 2;
+    }
+
+    if(this.controls.right){
+      this.x += 2;
+    }
+
     // fix always moving car problem
     if(Math.abs(this.speed) < this.friction) {
       this.speed = 0;
