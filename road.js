@@ -24,19 +24,14 @@ class Road{
         this.right,
         i/this.laneCount
       );
+
+      // draw lines
+      ctx.beginPath();
+      ctx.moveTo(x, this.top);
+      ctx.lineTo(x, this.bottom);
+      ctx.stroke();
     }
 
-    // drwa line to the left side of the road
-    ctx.beginPath();
-    ctx.moveTo(this.left, this.top);
-    ctx.lineTo(this.left, this.bottom);
-    ctx.stroke();
-
-    // drwa line to the right side of the road
-    ctx.beginPath();
-    ctx.moveTo(this.right, this.top);
-    ctx.lineTo(this.right, this.bottom);
-    ctx.stroke();
   }
 }
 
