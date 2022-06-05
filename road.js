@@ -27,6 +27,13 @@ class Road{
         i/this.laneCount
       );
 
+      // added dashs to middle lines
+      if(i>0 && i<this.laneCount){
+        ctx.setLineDash([20,20]);
+      } else {
+        ctx.setLineDash([]);
+      }
+
       // draw lines
       ctx.beginPath();
       ctx.moveTo(x, this.top);
