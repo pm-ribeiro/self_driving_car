@@ -1,3 +1,5 @@
+
+
 class Road{
   constructor(x, width, laneCount = 3){
     this.x = x;
@@ -33,10 +35,4 @@ class Road{
     }
 
   }
-}
-
-// linear interpolation
-// t is a percentage
-function lerp(A,B,t) {
-  return A+(B-A)*t;
 }
