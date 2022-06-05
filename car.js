@@ -38,6 +38,11 @@ class Car{
       this.speed += this.friction;
     }
 
+    // fix always moving car problem
+    if(Math.abs(this.speed) < this.friction) {
+      this.speed = 0;
+    }
+
     this.y -= this.speed;
   }
 
