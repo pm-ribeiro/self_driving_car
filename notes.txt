@@ -1,0 +1,5 @@
+Self-Driving Car with JavaScript Course – Neural Networks and Machine Learning
+https://www.youtube.com/watch?v=Rs_rAxEsAvI&t=2539s&ab_channel=freeCodeCamp.org
+
+Parei em 1h17min
+Criação da detecção de colisão + danos
