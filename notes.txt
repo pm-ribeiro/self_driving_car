@@ -3,3 +3,6 @@ https://www.youtube.com/watch?v=Rs_rAxEsAvI&t=2539s&ab_channel=freeCodeCamp.org
 
 Parei em 1h17min
 Criação da detecção de colisão + danos
+
+Code:
+https://github.com/gniziemazity/Self-driving-car
