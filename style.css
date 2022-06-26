@@ -2,8 +2,25 @@ body{
   margin:0;
   background:darkgray;
   overflow:hidden;
-  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#verticalButtons {
+  display: flex;
+  flex-direction: column;
+
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+  cursor: pointer;
+}
+
 #carCanvas{
   background: lightgray;
 }
