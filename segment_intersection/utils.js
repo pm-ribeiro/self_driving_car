@@ -21,6 +21,22 @@ function lerp(A, B, t) {
   return A+(B-A)*t;
 }
 
-function findMiddlePoint() {
+function getIntersection(A, B, C, D) {
+/**
+ * The intersection point must sattify the following conditions:
+ * Ix = Ax + (Bx - Ax)t = Cx + (Dx - Cx)u
+ * Iy = Ay + (By - Ay)t = Cy + (Dy - Cy)u
+ * ...
+ * top = (Dx - Cx)(Ay - Cy) - (Dy - Cy)(Ax - Cx)
+ * bottom = (Dy - Cy)(Bx - Ax) - (Dx - Cx)(By - Ay)
+ * t = top / bottom
+ */
 
+  const top = (D.x - C.x)*(A.y - C.y) - (D.y - C.y)*(A.x - C.x);
+  const bottom = (D.y - C.y)*(B.x - A.x) - (D.x - C.x)*(B.y - A.y)
+  const t = top / bottom
+  return {
+    x: lerp(A.x, B.x, t),
+    y: lerp(A.y, B.y, t)
+  }
 }
