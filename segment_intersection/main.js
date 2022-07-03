@@ -9,16 +9,17 @@ const B = {x: 150,  y: 250};
 const C = {x: 50,   y: 100};
 const D = {x: 250,  y: 200};
 
+const t = 0.5;
 // Middle point A and B
 const M = {
-  x: lerp(A.x, B.x, 0.5),
-  y: lerp(A.y, B.y, 0.5)
+  x: lerp(A.x, B.x, t),
+  y: lerp(A.y, B.y, t)
 }
 
 // Middle point C and D
 const N = {
-  x: lerp(C.x, D.x, 0.5),
-  y: lerp(C.y, D.y, 0.5)
+  x: lerp(C.x, D.x, t),
+  y: lerp(C.y, D.y, t)
 }
 
 const ctx =segmentIntersectionCanvas.getContext("2d");
