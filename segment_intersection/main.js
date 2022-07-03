@@ -28,30 +28,12 @@ function animate() {
   drawPoint(C, "C");
   drawPoint(D, "D");
 
-  // Middle point A and B
-  const M = {
-    x: lerp(A.x, B.x, t),
-    y: lerp(A.y, B.y, t)
-  }
-
-  // Middle point C and D
-  const N = {
-    x: lerp(C.x, D.x, t),
-    y: lerp(C.y, D.y, t)
-  }
-
-  drawPoint(M, "M", t<0 || t>1);
-  drawPoint(N, "N",  t<0 || t>1);
-
   const I = getIntersection(A,B,C,D);
   drawPoint(I, "I");
 
-  t += 0.005;
   requestAnimationFrame(animate);
 };
 
 // --------------------------------------------------
-
-let t = -1;
 const ctx = segmentIntersectionCanvas.getContext("2d");
 animate(segmentIntersectionCanvas);
