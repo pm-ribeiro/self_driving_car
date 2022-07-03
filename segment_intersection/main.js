@@ -11,11 +11,14 @@ const D = {x: 250,  y: 200};
 // --------------------------------------------------
 function animate() {
   const radius = 50;
-  A.x = mouse.x;
-  A.y = mouse.y - radius;
+  // print na mesa sobre o angulo
+  A.x = mouse.x + Math.cos(angle) * radius;
+  A.y = mouse.y - Math.sin(angle) * radius;
 
-  B.x = mouse.x;
-  B.y = mouse.y + radius;
+  B.x = mouse.x - Math.cos(angle) * radius;
+  B.y = mouse.y + Math.sin( angle) * radius;
+
+  angle += 0.02;
 
   ctx.clearRect(
     0,
@@ -36,14 +39,17 @@ function animate() {
   drawPoint(D, "D");
 
   const I = getIntersection(A,B,C,D);
-  drawPoint(I, "I");
+  if(I) {
+    drawPoint(I, "I");
+  }
 
   requestAnimationFrame(animate);
 };
 
-// --------------------------------------------------
+// -------------------------------- ------------------
 const ctx = segmentIntersectionCanvas.getContext("2d");
 
+let angle = 0;
 const mouse = {x:0, y:0};
 document.onmousemove = (event) => {
   mouse.x = event.x;
