@@ -8,10 +8,7 @@ const B = {x: 150,  y: 250};
 const C = {x: 50,   y: 100};
 const D = {x: 250,  y: 200};
 
-let t = 0;
-const ctx = segmentIntersectionCanvas.getContext("2d");
-animate(segmentIntersectionCanvas);
-
+// --------------------------------------------------
 function animate() {
   ctx.clearRect(
     0,
@@ -48,3 +45,9 @@ function animate() {
   t += 0.005;
   requestAnimationFrame(animate);
 };
+
+// --------------------------------------------------
+
+let t = 0;
+const ctx = segmentIntersectionCanvas.getContext("2d");
+animate(segmentIntersectionCanvas);
