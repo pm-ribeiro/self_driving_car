@@ -12,3 +12,15 @@ function drawPoint (point, label) {
   ctx.font = "bold 14px Arial";
   ctx.fillText(label, point.x, point.y);
 }
+
+// Linear interpolation
+// when t 0 return A (end points)
+// when t 1 return B (end points)
+// t is a percentage
+function lerp(A, B, t) {
+  return A+(B-A)*t;
+}
+
+function findMiddlePoint() {
+
+}
