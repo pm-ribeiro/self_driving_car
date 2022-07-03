@@ -39,8 +39,9 @@ function animate() {
     x: lerp(C.x, D.x, t),
     y: lerp(C.y, D.y, t)
   }
-  drawPoint(M, "M");
-  drawPoint(N, "N");
+
+  drawPoint(M, "M", t<0 || t>1);
+  drawPoint(N, "N",  t<0 || t>1);
 
   t += 0.005;
   requestAnimationFrame(animate);
@@ -48,6 +49,6 @@ function animate() {
 
 // --------------------------------------------------
 
-let t = 0;
+let t = -1;
 const ctx = segmentIntersectionCanvas.getContext("2d");
 animate(segmentIntersectionCanvas);
