@@ -10,6 +10,13 @@ const D = {x: 250,  y: 200};
 
 // --------------------------------------------------
 function animate() {
+  const radius = 50;
+  A.x = mouse.x;
+  A.y = mouse.y - radius;
+
+  B.x = mouse.x;
+  B.y = mouse.y + radius;
+
   ctx.clearRect(
     0,
     0,
@@ -36,4 +43,11 @@ function animate() {
 
 // --------------------------------------------------
 const ctx = segmentIntersectionCanvas.getContext("2d");
-animate(segmentIntersectionCanvas);
+
+const mouse = {x:0, y:0};
+document.onmousemove = (event) => {
+  mouse.x = event.x;
+  mouse.y = event.y;
+}
+
+animate();
